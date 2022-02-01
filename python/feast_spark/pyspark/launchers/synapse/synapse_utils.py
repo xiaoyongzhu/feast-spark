@@ -147,7 +147,7 @@ class SynapseJobRunner(object):
         driver_memory = EXECUTOR_SIZE[self._executor_size]['Memory']
         executor_cores = EXECUTOR_SIZE[self._executor_size]['Cores']
         executor_memory = EXECUTOR_SIZE[self._executor_size]['Memory']
-        
+
         # This is needed to correctly set the spark properties needed by org.apache.hadoop.fs.azure.NativeAzureFileSystem
         # Please see: https://github.com/Azure/feast-azure/issues/41
         if "FEAST_AZURE_BLOB_ACCOUNT_NAME" in os.environ and "FEAST_AZURE_BLOB_ACCOUNT_ACCESS_KEY" in os.environ:
