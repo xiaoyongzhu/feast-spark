@@ -640,7 +640,7 @@ def _read_and_verify_entity_df_from_source(
 
 
 def _type_casting_allowed(feature_type: str, source_col_type):
-    allowed_casting_for_source_col = {"double": ["float"]}
+    allowed_casting_for_source_col = {"double": ["float"], "bigint": ["int"]}
 
     if feature_type == source_col_type:
         return True
